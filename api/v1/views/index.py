@@ -30,16 +30,6 @@ def status_check():
     return jsonify({"status": "OK"})
 
 
-@app_views.route('/stats')
-def retrieve_number():
-    '''
-    retrieves number of objects by type
-    '''
-    obj_dict = {}
-    for key, value in classes.items():
-        obj_dict[key] = storage.count(value)
-    return jsonify(obj_dict)
-
 @app_views.route('/stats', strict_slashes=False)
 def stats():
     """Retrieve count of objects in storage for various classes
