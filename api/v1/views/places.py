@@ -94,7 +94,6 @@ def update_place(place_id=None):
 
 @app_views.route('/places_search', methods=['POST'],
                  strict_slashes=False)
-@swag_from('documentation/places/search.yml', methods=['POST'])
 def search_places_by_id():
     """ search places by id """
     if request.get_json() is None:
