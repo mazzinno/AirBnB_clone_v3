@@ -55,7 +55,6 @@ def create_amenity():
                  methods=['PUT'],
                  strict_slashes=False)
 def update_amenity(amenity_id):
-    """Updates an Amenity object by its ID"""
     amenity = storage.get(Amenity, amenity_id)
     if amenity is None:
         abort(404)
